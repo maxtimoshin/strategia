@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      type="image/x-icon"
+      rel="shortcut icon"
+      href="./img/favicons/32x32.ico"
+    />
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="/img/favicons/16x16.png"
+    />
+    <link
+      type="image/png"
+      sizes="32x32"
+      rel="icon"
+      href="/img/favicons/32x32.png"
+    />
+    <link
+      type="image/png"
+      sizes="96x96"
+      rel="icon"
+      href="/img/favicons/96x96.png"
+    />
+    <link
+      type="image/png"
+      sizes="120x120"
+      rel="icon"
+      href="/img/favicons/120x120.png"
+    />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="form-modal-wrapper">
+      <div class="form-modal-content">
+        <div class="modal-title">
+          Замовлення послуги
+          <img src="./assets/images/modal-cross.svg" class="modal-cross" />
+        </div>
+
+        <form class="action-form modal-form" action="">
+          <div class="form-inputs-grid">
+            <input
+              class="input1 form-input"
+              name="company"
+              placeholder="назва компанії"
+              type="text"
+            />
+            <input
+              class="input2 form-input"
+              name="name"
+              placeholder="прізвище та імʼя"
+              type="text"
+            />
+            <input
+              class="input3 form-input"
+              name="jobTitle"
+              placeholder="посада в компанії"
+              type="text"
+            />
+            <input
+              class="input4 form-input"
+              name="phone"
+              placeholder="телефон"
+              type="text"
+            />
+            <input
+              class="input5 form-input"
+              name="email"
+              placeholder="пошта"
+              type="text"
+            />
+            <input
+              class="input6 form-input"
+              name="service"
+              placeholder="послуга"
+              type="text"
+            />
+          </div>
+          <button type="submit" class="form-submit-button">замовити</button>
+        </form>
+      </div>
+      <div class="success-modal">
+        <img
+          src="./assets/images/success-rocket.png"
+          alt=""
+          class="success-image"
+        />
+        <div class="success-content">
+          <img
+            src="./assets/images/modal-cross.svg"
+            class="modal-cross success-cross"
+          />
+          <div class="title">Вітаємо</div>
+          <span
+            >Ваш запит успішно відправлено.<br />
+            Ми зв’яжемось з вами найближчим часом.</span
+          >
+          <button class="header-action-button modal-cross">на головну</button>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header-nav">
+            <a class="logo"><img src="./assets/images/logo.svg" alt="" /></a>
+            <ul class="nav-list">
+              <li class="nav-list-item"><a href="">про нас</a></li>
+              <li class="nav-list-item"><a href="">підхід</a></li>
+              <li class="nav-list-item"><a href="">кейси</a></li>
+              <li class="nav-list-item"><a href="">послуги</a></li>
+            </ul>
+            <button class="consult-button modal-action-button">
+              консультація
+            </button>
+          </div>
+          <div class="header-content">
+            <div class="left-header-content">
+              <div class="header-content-label">створюємо стратегії</div>
+              <div class="top-header-heading">привіт</div>
+              <div class="bottom-header-heading">
+                <div class="large-bottom-heading">ми</div>
+                <div class="small-bottom-heading">
+                  бюро<br />
+                  стратегія
+                </div>
+              </div>
+              <div class="header-action-block">
+                <button class="header-action-button modal-action-button">
+                  познайомитись
+                </button>
+                <span class="header-action-description"
+                  >допомагаємо бізнесу зростати структурно. покроково.
+                  результативно.</span
+                >
+              </div>
+              <img
+                class="header-action-tip-arrow"
+                src="./assets/images/arrow.svg"
+              />
+              <div class="header-action-tip-text">
+                натисніть та дізнайтесь як стратегія може покращити ваш бізнес
+              </div>
+            </div>
+            <div class="right-header-content">
+              <img src="./assets/images/header-content-image.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container">
+          <div class="block-title">
+            <div class="upper-block-title">
+              <div class="upper-block-title-text">ми</div>
+              <div class="upper-block-title-line"></div>
+            </div>
+            <div class="lower-block-title-text">працюємо для:</div>
+          </div>
+          <div class="working-for-block">
+            <div class="working-for-title">бізнесу</div>
+            <ul class="working-for-list">
+              <li><img src="./assets/images/asterisk.svg" alt="" />малого</li>
+              <li>
+                <img src="./assets/images/asterisk.svg" alt="" />середнього
+              </li>
+              <li>
+                <img src="./assets/images/asterisk.svg" alt="" />стартапів
+              </li>
+            </ul>
+          </div>
+          <div class="block-title">
+            <div class="upper-block-title">
+              <div class="upper-block-title-text">а це</div>
+              <div class="upper-block-title-line"></div>
+            </div>
+            <div class="lower-block-title-text">
+              епітети про <span>наших</span> клієнтів:
+            </div>
+          </div>
+          <div class="epithets-block">
+            <div class="left-epithets">
+              <div class="top-left-epithets">
+                <div class="epithet top-left-epithet light-epithet">нові</div>
+                <div class="epithet top-left-epithet dark-epithet">
+                  динамічні
+                </div>
+              </div>
+              <div class="bottom-left-epithets epithet light-epithet">
+                <img src="./assets/images/logo-icon.svg" alt="" /> прогресивні
+              </div>
+            </div>
+            <div class="right-epithets">
+              <div class="top-right-epithets">
+                <div class="top-right-epithet epithet dark-epithet">
+                  сміливі
+                </div>
+                <div class="top-right-epithet epithet light-epithet">
+                  амбітні
+                </div>
+              </div>
+              <div class="bottom-right-epithets epithet dark-epithet">
+                <img src="./assets/images/lightning-icon.svg" alt="" />
+                заряджені
+              </div>
+            </div>
+          </div>
+          <div class="block-title">
+            <div class="upper-block-title">
+              <div class="upper-block-title-text">а ще</div>
+              <div class="upper-block-title-line"></div>
+            </div>
+          </div>
+          <div class="benefits-block">
+            <div class="benefits-title">ми:</div>
+            <ul class="benefits-list">
+              <li>
+                <img src="./assets/images/asterisk.svg" alt="" />створюємо
+                індивідуальні стратегії
+              </li>
+              <li>
+                <img src="./assets/images/asterisk.svg" alt="" />пропонуємо
+                довготривалі рішення
+              </li>
+              <li>
+                <img src="./assets/images/asterisk.svg" alt="" />орієнтуємось на
+                фінансовий результат
+              </li>
+            </ul>
+          </div>
+          <div class="block-title">
+            <div class="upper-block-title">
+              <div class="upper-block-title-text">нам</div>
+              <div class="upper-block-title-line"></div>
+            </div>
+          </div>
+          <div class="how-we-work-block">
+            <div class="how-we-work-title">довіряють</div>
+            <div class="how-we-work-subtitle">бо ми працюємо:</div>
+            <div class="how-we-work-types">
+              <div class="work-type">
+                <img src="./assets/images/asterisk.svg" alt="" />
+                <div class="work-type-title">системно.</div>
+                <span class="work-type-item">для планування — scrum.</span>
+                <span class="work-type-item"
+                  >для управління — таск-менеджер.</span
+                >
+                <span class="work-type-item"
+                  >для синхронізації — дзвінки сторі-поінти.</span
+                >
+              </div>
+              <div class="work-type">
+                <img src="./assets/images/asterisk.svg" alt="" />
+                <div class="work-type-title">data-driven.</div>
+                <span class="work-type-item">crm — це наші</span>
+                <span class="work-type-item">аналітика — найкращі</span>
+                <span class="work-type-item">бізнес-процеси — друзі</span>
+              </div>
+              <div class="work-type">
+                <img src="./assets/images/asterisk.svg" alt="" />
+                <div class="work-type-title">професійно.</div>
+
+                <span class="work-type-item"
+                  >8 — ключових етапів створення стратегії</span
+                >
+                <span class="work-type-item"
+                  >27 — фреймворків та методологій</span
+                >
+                <span class="work-type-item"
+                  >50 — обовʼязкових задач для виконання</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="block-title">
+            <div class="upper-block-title">
+              <div class="upper-block-title-text">наші</div>
+              <div class="upper-block-title-line"></div>
+            </div>
+            <div class="lower-block-title-text">послуги:</div>
+          </div>
+          <div class="services stages-accordion">
+            <button class="accordion">
+              <div class="stages-content">
+                <div class="accordion-title">
+                  маркетингова стратегія
+                  <div class="clock"></div>
+                  <span>1-3 місяці</span>
+                </div>
+                <div class="accordion-cross"></div>
+              </div>
+            </button>
+            <div class="panel">
+              <div class="service-content">
+                <div class="service-description">
+                  <span>ключова</span> послуга, яка допомагає компанії знайти
+                  нові вектори розвитку, нові можливості і сенси. улюблена
+                  послуга власників бізнесу та СМО.
+                </div>
+                <div class="service-action">
+                  <button class="modal-action-button">замовити</button>
+                  <div class="service-price">від $4,500</div>
+                </div>
+              </div>
+            </div>
+            <button class="accordion">
+              <div class="stages-content">
+                <div class="accordion-title">
+                  брендинг та айдентика
+                  <div class="clock"></div>
+                  <span>2-3 місяці</span>
+                </div>
+                <div class="accordion-cross"></div>
+              </div>
+            </button>
+            <div class="panel">
+              <div class="service-content">
+                <div class="service-description">
+                  додаткова послуга, потрібна бізнесам, які запускаються з нуля
+                  або змінюються. ми створюємо новий візуал для нових стратегій
+                </div>
+                <div class="service-action">
+                  <button class="modal-action-button">замовити</button>
+                  <div class="service-price">від $3,500</div>
+                </div>
+              </div>
+            </div>
+            <button class="accordion">
+              <div class="stages-content">
+                <div class="accordion-title">
+                  побудова відділу маркетингу
+                  <div class="clock"></div>
+                  <span>2-6 місяці</span>
+                </div>
+                <div class="accordion-cross"></div>
+              </div>
+            </button>
+            <div class="panel">
+              <div class="service-content">
+                <div class="service-description">
+                  комплексна і довгострокова послуга, яка включає аудит,
+                  створення стратегії, орг.структури, регламентів роботи відділу
+                  маркетингу, найм спеціалістів
+                </div>
+                <div class="service-action">
+                  <button class="modal-action-button">замовити</button>
+                  <div class="service-price">від $5,000</div>
+                </div>
+              </div>
+            </div>
+            <button class="accordion">
+              <div class="stages-content">
+                <div class="accordion-title">
+                  аудит маркетингу та стратегічна сесія
+                  <div class="clock"></div>
+                  <span>1-14 днів</span>
+                </div>
+                <div class="accordion-cross"></div>
+              </div>
+            </button>
+            <div class="panel">
+              <div class="service-content">
+                <div class="service-description">
+                  короткострокова послуга, щоб швидко зрозуміти стан маркетингу
+                  в своєму бізнесі та куди рухатись далі
+                </div>
+                <div class="service-action">
+                  <button class="modal-action-button">замовити</button>
+                  <div class="service-price">від $1,000</div>
+                </div>
+              </div>
+            </div>
+            <button class="accordion">
+              <div class="stages-content">
+                <div class="accordion-title">
+                  консультація
+                  <div class="clock"></div>
+                  <span>1 година</span>
+                </div>
+                <div class="accordion-cross"></div>
+              </div>
+            </button>
+            <div class="panel">
+              <div class="service-content">
+                <div class="service-description">
+                  швидкий аудит та розбір нагальних питання в форматі
+                  питання-відповідь
+                </div>
+                <div class="service-action">
+                  <button class="modal-action-button">замовити</button>
+                  <div class="service-price">$150</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block-title">
+            <div class="upper-block-title">
+              <div class="upper-block-title-text">наші</div>
+              <div class="upper-block-title-line"></div>
+            </div>
+          </div>
+          <div class="cases-block">
+            <div class="cases-title">кейси</div>
+            <div class="cases-subtitle">та результати</div>
+            <div class="cases-grid">
+              <div class="single-case">
+                <div class="single-case-wrapper">
+                  <div class="case-title">ІТ-компанія (NDA)</div>
+                  <div class="case-task">
+                    <div class="case-task-title">Завдання:</div>
+                    <div class="case-task-description">
+                      побудувати стратегію та оптимізувати роботу відділу
+                      маркетингу (30 людей)
+                    </div>
+                  </div>
+                  <div class="case-result">
+                    <div class="case-result-title">результат:</div>
+                    <div class="case-result-description">
+                      Зростання прибутку на 200%. Ріст доходу  з $500к до $1млн
+                      на місяць. Оптимізація команди з 30 до 20 людей, найм
+                      middle та senior спеціалістів. Побудова системи звітності
+                      та аналітики. Найм СМО.
+                    </div>
+                  </div>
+                  <div class="case-term">
+                    Термін: 12 місяців (продовжується)
+                  </div>
+                </div>
+              </div>
+              <div class="single-case">
+                <div class="single-case-wrapper">
+                  <div class="case-title">Школа англійської (NDA)</div>
+                  <div class="case-task">
+                    <div class="case-task-title">Завдання:</div>
+                    <div class="case-task-description">
+                      покращити роботу онлайн-напрямку школи англійської.
+                    </div>
+                  </div>
+                  <div class="case-result">
+                    <div class="case-result-title">результат:</div>
+                    <div class="case-result-description">
+                      Приріст 100 клієнтів щомісячно. Зниження вартості ліда з
+                      $150 до $3. Побудова внутрішньої команди без аутсорсу.
+                      Інтеграція CRM, воронок продажу. Взаємодія відділу
+                      маркетингу з продажами.
+                    </div>
+                  </div>
+                  <div class="case-term">Термін: 9 місяців</div>
+                </div>
+              </div>
+              <div class="single-case">
+                <div class="single-case-wrapper">
+                  <div class="case-title">Pizza Hut</div>
+                  <div class="case-task">
+                    <div class="case-task-title">Завдання:</div>
+                    <div class="case-task-description">
+                      провести дослідження і побудувати стратегію залучення
+                      більшої к-ті клієнтів.
+                    </div>
+                  </div>
+                  <div class="case-result">
+                    <div class="case-result-title">результат:</div>
+                    <div class="case-result-description">
+                      Запропоновано більше 10 важелів збільшення продажів.
+                      Проведено кількісні та якісні дослідження, аналіз діджитал
+                      конкурентів, створено стратегію розвитку компанії на
+                      локальному ринку.
+                    </div>
+                  </div>
+                  <div class="case-term">Термін: 3 місяці</div>
+                </div>
+              </div>
+              <div class="single-case">
+                <div class="single-case-wrapper">
+                  <div class="case-title">Viva Dessert</div>
+                  <div class="case-task">
+                    <div class="case-task-title">Завдання:</div>
+                    <div class="case-task-description">
+                      ребрендинг та стратегія перезапуску мережі кондитерських
+                    </div>
+                  </div>
+                  <div class="case-result">
+                    <div class="case-result-title">результат:</div>
+                    <div class="case-result-description">
+                      Клієнт вже перезапустив 2 оффлайн локації та почав
+                      e-commerce продажі.  Рухається відповідно маркетинговій
+                      стратегії, в якій детально пропрацьовано CJM та ToV і
+                      рекламну стратегію.
+                    </div>
+                  </div>
+                  <div class="case-term">Термін: 4 місяці</div>
+                </div>
+              </div>
+              <div class="single-case">
+                <div class="single-case-wrapper">
+                  <div class="case-title">Crypto project (NDA)</div>
+                  <div class="case-task">
+                    <div class="case-task-title">Завдання:</div>
+                    <div class="case-task-description">
+                      сформувати бізнес-модель, бренд та маркетингову стратегію
+                    </div>
+                  </div>
+                  <div class="case-result">
+                    <div class="case-result-title">результат:</div>
+                    <div class="case-result-description">
+                      У клієнта є готова бізнес модель, цінова політика, модель
+                      монетизації, рекламні кампанії. Має визначені ринки для
+                      запуску. Проєкт проходить пітч-деки та залучає десятки
+                      тисяч доларів інвестицій.
+                    </div>
+                  </div>
+                  <div class="case-term">Термін: 6 місяців</div>
+                </div>
+              </div>
+              <div class="single-case">
+                <div class="single-case-wrapper">
+                  <div class="case-title">Місце вашого проекту</div>
+                  <div class="case-action-button modal-action-button">
+                    Стати клієнтом
+                  </div>
+                  <div class="case-term">Термін: буде визначено</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block-title">
+            <div class="upper-block-title">
+              <div class="upper-block-title-text">які</div>
+              <div class="upper-block-title-line"></div>
+            </div>
+          </div>
+          <div class="tasks-block">
+            <div class="tasks-title">задачі</div>
+            <div class="tasks-subtitle">
+              вирішує стратегія?<span
+                >*насправді стратегія може вирішити ще<br />
+                близько 30 інших задач</span
+              >
+            </div>
+            <div class="tasks-grid">
+              <div class="single-task task1">
+                визначити мету та цілі роботи компанії
+              </div>
+              <div class="single-task task2">створити конкурентну перевагу</div>
+              <div class="single-task task3">
+                оновити цілі компанії та інструменти
+              </div>
+              <div class="single-task task4">визначити потреби споживачів</div>
+              <div class="single-task task5">
+                розробити план дій з маркетингу
+              </div>
+              <div class="single-task task6">адаптувати компанію до змін</div>
+              <div class="single-task task7">підготувати до інвестицій</div>
+              <div class="single-task task8">передбачити ризик-менеджмент</div>
+              <div class="single-task task9">оптимізувати витрати</div>
+              <div class="single-task task10">
+                оновити та провести ребрендинг
+              </div>
+            </div>
+          </div>
+          <div class="block-title">
+            <div class="upper-block-title">
+              <div class="upper-block-title-text">ми</div>
+              <div class="upper-block-title-line"></div>
+            </div>
+            <div class="lower-block-title-text">
+              віримо, що бізнес — завжди особисте.
+            </div>
+          </div>
+          <div class="personal-block">
+            <div class="personal-quote">
+              <p class="upper-personal-quote">
+                бо за кожним бізнесом<br />
+                <span class="absolute-logo-icon">—</span> стоїть людина, яка
+                його створила.
+              </p>
+              <p class="lower-personal-quote">
+                <span>тому, пропонуємо</span><br />
+                познайомитись
+                <span>особисто.</span>
+              </p>
+            </div>
+            <div class="personal-feedback">
+              <img
+                class="user-preview"
+                src="./assets/images/person-picture.png"
+                alt=""
+              />
+              <div class="form-wrapper">
+                <form class="action-form" action="">
+                  <div class="form-inputs-grid">
+                    <input
+                      class="input1 form-input"
+                      name="company"
+                      placeholder="назва компанії"
+                      type="text"
+                    />
+                    <input
+                      class="input2 form-input"
+                      name="name"
+                      placeholder="прізвище та імʼя"
+                      type="text"
+                    />
+                    <input
+                      class="input3 form-input"
+                      name="jobTitle"
+                      placeholder="посада в компанії"
+                      type="text"
+                    />
+                    <input
+                      class="input4 form-input"
+                      name="phone"
+                      placeholder="телефон"
+                      type="text"
+                    />
+                    <input
+                      class="input5 form-input"
+                      name="email"
+                      placeholder="пошта"
+                      type="text"
+                    />
+                    <input
+                      class="input6 form-input"
+                      name="service"
+                      placeholder="послуга"
+                      type="text"
+                    />
+                  </div>
+                  <button type="submit" class="form-submit-button">
+                    познайомитись
+                  </button>
+                </form>
+                <div class="user-label">
+                  Євгеній
+                  <span>(людина з якою ви будете спілкуватись)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="block-title">
+            <div class="upper-block-title">
+              <div class="upper-block-title-text">кілька фактів про досвід</div>
+              <div class="upper-block-title-line"></div>
+            </div>
+          </div>
+          <div class="experience-block">
+            <div class="experience-item">
+              <div class="experience-icon">
+                <img src="./assets/images/calendar-icon.svg" alt="" />
+                <div class="experience-line"></div>
+              </div>
+              <div class="experience-title"><span>7</span>років</div>
+              <div class="experience-description">у сфері маркетингу</div>
+            </div>
+            <div class="experience-item">
+              <div class="experience-icon">
+                <img src="./assets/images/figures-icon.svg" alt="" />
+                <div class="experience-line"></div>
+              </div>
+              <div class="experience-title"><span>15</span>ніш</div>
+              <div class="experience-description">
+                бізнесу в яких реалізовано проєкти
+              </div>
+            </div>
+            <div class="experience-item">
+              <div class="experience-icon">
+                <img src="./assets/images/logo-icon.svg" alt="" />
+                <div class="experience-line"></div>
+              </div>
+              <div class="experience-title"><span>30+</span></div>
+              <div class="experience-description">
+                клієнтів для яких створено стратегії
+              </div>
+            </div>
+            <div class="experience-item">
+              <div class="experience-icon">
+                <img src="./assets/images/dollar-icon.svg" alt="" />
+                <div class="experience-line"></div>
+              </div>
+              <div class="experience-title"><span>$1</span>млн</div>
+              <div class="experience-description">
+                best-case доходу для клієнта за місяць роботи
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container footer-container">
+          <div class="footer-social">
+            <a href="" target="_blank" class="instagram">
+              <img
+                src="./assets/images/instagram-icon.svg"
+                alt=""
+              />strategy.buro
+            </a>
+            <a href="" target="_blank" class="facebook">
+              <img
+                src="./assets/images/facebook-icon.svg"
+                alt=""
+              />strategy.buro
+            </a>
+            <a
+              href="mailto:strategy.buro@gmail.com"
+              target="_blank"
+              class="email"
+            >
+              <img
+                src="./assets/images/mail-icon.svg"
+                alt=""
+              />strategy.buro@gmail.com
+            </a>
+          </div>
+          <a class="private-policy">політика конфіденційності</a>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/accordion.js"></script>
+  </body>
+</html>

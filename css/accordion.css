@@ -1,0 +1,129 @@
+.accordion {
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    border-top: 2px solid #000;
+    margin: 0;
+    padding: 0;
+    min-height: 90px;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-cross {
+    width: 32px;
+    height: 36px;
+    background-image: url("../assets/images/cross-closed.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.accordion.active .accordion-cross {
+    background-image: url("../assets/images/cross-opened.svg");
+}
+
+.stages-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock {
+    background-image: url("../assets/images/red-clock-icon.svg");
+    width: 36px;
+    height: 36px;
+}
+
+.accordion-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "TT Firs Neue";
+    transition: color 0.3s;
+}
+
+.accordion-title span {
+    font-size: 40px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.accordion.active .accordion-title {
+    color: #810000;
+}
+.accordion.active .accordion-title span {
+    color: #810000;
+}
+
+.accordion.active .clock {
+    background-image: url("../assets/images/black-clock-icon.svg");
+}
+
+.service-content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px 0;
+}
+
+.service-description {
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    margin: 0 0 50px 0;
+}
+
+.service-description span {
+    font-weight: 700;
+}
+
+.service-action {
+    display: flex;
+    gap: 24px;
+}
+
+.service-action button {
+    background: #810000;
+    color: #eeebdd;
+    border: 1px solid #810000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 74px;
+    min-height: 45px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.service-price {
+    background: transparent;
+    color: #1b1717;
+    border: 1px solid #1b1717;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 0 32px;
+    min-height: 45px;
+}
+
+.service-action button:hover {
+    background: transparent;
+    color: #810000;
+}

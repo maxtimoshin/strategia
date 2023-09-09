@@ -1,0 +1,75 @@
+@import "./header.css";
+@import "./main.css";
+@import "./footer.css";
+@import "./adaptive.css";
+@import "./burger-nav.css";
+@import "./fonts.css";
+@import "./normalize.css";
+@import "./accordion.css";
+/* @import "./modal.css"; */
+
+/* :root {
+    --main-bg-color: #000;
+    --main-content-color: #eafc52;
+    --main-font-color: #fff;
+    --ff: "TT Firs Neue";
+    --fw-n: normal;
+    --fw-b: bold;
+    --fw-l: light;
+    --fs-16: 0.75rem;
+    --fs-18: 1rem;
+    --fs-20: 1.25rem;
+    --fs-22: 1.375rem;
+    --fs-30: 1.875rem;
+    --fs-40: 2.5rem;
+    --fs-60: 3.75rem;
+    --fs-80: 5rem;
+} */
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1126px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* @media (-webkit-device-pixel-ratio: 1.25) {
+    * {
+        zoom: 0.8;
+    }
+} */
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+    :root {
+        zoom: 0.8;
+    }
+}
+@media (-webkit-device-pixel-ratio: 1.1) {
+    :root {
+        zoom: 0.8;
+    }
+}
+@media (-webkit-device-pixel-ratio: 1.5) {
+    :root {
+        zoom: 0.8;
+    }
+}
+@media (-webkit-device-pixel-ratio: 1.75) {
+    :root {
+        zoom: 0.8;
+    }
+}
+@media (-webkit-device-pixel-ratio: 2) {
+    :root {
+        zoom: 0.8;
+    }
+}
