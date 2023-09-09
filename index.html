@@ -10,34 +10,16 @@
     <link
       type="image/x-icon"
       rel="shortcut icon"
-      href="./img/favicons/32x32.ico"
+      href="./assets/images/favicons/32x32.ico"
     />
-    <link
-      type="image/png"
-      sizes="16x16"
-      rel="icon"
-      href="/img/favicons/16x16.png"
-    />
-    <link
-      type="image/png"
-      sizes="32x32"
-      rel="icon"
-      href="/img/favicons/32x32.png"
-    />
-    <link
-      type="image/png"
-      sizes="96x96"
-      rel="icon"
-      href="/img/favicons/96x96.png"
-    />
-    <link
-      type="image/png"
-      sizes="120x120"
-      rel="icon"
-      href="/img/favicons/120x120.png"
-    />
+    <link type="image/png" sizes="16x16" rel="icon"
+    href=./assets/images/favicons/16x16.png" /> <link type="image/png"
+    sizes="32x32" rel="icon" href=./assets/images/favicons/32x32.png" /> <link
+    type="image/png" sizes="96x96" rel="icon"
+    href=./assets/images/favicons/96x96.png" /> <link type="image/png"
+    sizes="120x120" rel="icon" href=./assets/images/favicons/120x120.png" />
 
-    <title>Document</title>
+    <title>Стратегія</title>
   </head>
 
   <body>
@@ -80,12 +62,16 @@
               placeholder="пошта"
               type="text"
             />
-            <input
-              class="input6 form-input"
-              name="service"
-              placeholder="послуга"
-              type="text"
-            />
+            <div class="custom-select">
+              <select>
+                <option value="0">послуга</option>
+                <option value="1">маркетингова стратегія</option>
+                <option value="2">брендинг та айдентика</option>
+                <option value="3">побудова відділу маркетингу</option>
+                <option value="4">аудит маркетингу</option>
+                <option value="5">консультація</option>
+              </select>
+            </div>
           </div>
           <button type="submit" class="form-submit-button">замовити</button>
         </form>
@@ -116,10 +102,10 @@
           <div class="header-nav">
             <a class="logo"><img src="./assets/images/logo.svg" alt="" /></a>
             <ul class="nav-list">
-              <li class="nav-list-item"><a href="">про нас</a></li>
-              <li class="nav-list-item"><a href="">підхід</a></li>
-              <li class="nav-list-item"><a href="">кейси</a></li>
-              <li class="nav-list-item"><a href="">послуги</a></li>
+              <li class="nav-list-item about-us-button"><a>про нас</a></li>
+              <li class="nav-list-item approach-button"><a>підхід</a></li>
+              <li class="nav-list-item cases-button"><a>кейси</a></li>
+              <li class="nav-list-item services-button"><a>послуги</a></li>
             </ul>
             <button class="consult-button modal-action-button">
               консультація
@@ -630,12 +616,16 @@
                       placeholder="пошта"
                       type="text"
                     />
-                    <input
-                      class="input6 form-input"
-                      name="service"
-                      placeholder="послуга"
-                      type="text"
-                    />
+                    <div class="custom-select">
+                      <select>
+                        <option value="0">послуга</option>
+                        <option value="1">маркетингова стратегія</option>
+                        <option value="2">брендинг та айдентика</option>
+                        <option value="3">побудова відділу маркетингу</option>
+                        <option value="4">аудит маркетингу</option>
+                        <option value="5">консультація</option>
+                      </select>
+                    </div>
                   </div>
                   <button type="submit" class="form-submit-button">
                     познайомитись
