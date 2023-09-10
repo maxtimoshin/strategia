@@ -9,6 +9,10 @@ const modalCross = document.querySelectorAll(".modal-cross");
 const modalActionButtons = document.querySelectorAll(".modal-action-button");
 const formSubmitButtons = document.querySelectorAll(".form-submit-button");
 
+// Burger Items
+const iconMenu = document.querySelector(".menu-icon");
+const menuBody = document.querySelector(".menu-body");
+
 function modalVisibilityHandler() {
   //   modalContent.classList.remove("hidden");
   modalWrapper.classList.toggle("visible");
@@ -17,9 +21,16 @@ function modalVisibilityHandler() {
 
 if (modalActionButtons) {
   modalActionButtons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+      if (e.target.dataset.value) {
+        document.querySelector(".select-selected").innerHTML =
+          e.target.dataset.value;
+      }
       modalVisibilityHandler();
       modalContent.classList.remove("hidden");
+      document.body.classList.remove("lock");
+      iconMenu.classList.remove("active-modal");
+      menuBody.classList.remove("active-modal");
     });
   });
 }
@@ -33,6 +44,15 @@ if (modalCross) {
 }
 
 if (modalContent) {
+  window.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      modalWrapper.classList.remove("visible");
+      successModal.classList.remove("visible");
+      document.body.classList.remove("lock");
+      iconMenu.classList.remove("active-modal");
+      menuBody.classList.remove("active-modal");
+    }
+  });
   document.addEventListener("click", (e) => {
     if (e.target === modalWrapper) {
       modalVisibilityHandler();
@@ -62,19 +82,19 @@ const casesButton = document.querySelectorAll(".cases-button");
 const servicesButton = document.querySelectorAll(".services-button");
 
 // Scroll To Blocks
-const aboutUsBlock = document.querySelector(".header");
-const approachBlock = document.querySelector(".about-us-block");
-const casesBlock = document.querySelector(".team-block");
-const servicesBlock = document.querySelector(".resume-block");
+const aboutUsBlock = document.querySelector(".about-us-block");
+const approachBlock = document.querySelector(".approach-block");
+const casesBlock = document.querySelector(".cases-scroll-block");
+const servicesBlock = document.querySelector(".services-scroll-block");
 
 // Scroll To Handler
 function scrollingToBlock(btn, block) {
   btn.forEach((e) => {
     e.addEventListener("click", () => {
-      block.scrollIntoView({ block: "center", behavior: "smooth" });
+      block.scrollIntoView({ block: "start", behavior: "smooth" });
       document.body.classList.remove("lock");
-      iconMenu.classList.remove("activem");
-      menuBody.classList.remove("activem");
+      iconMenu.classList.remove("active-modal");
+      menuBody.classList.remove("active-modal");
     });
   });
 }
@@ -173,3 +193,12 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+
+// Burger logic toggler
+if (iconMenu) {
+  iconMenu.addEventListener("click", (e) => {
+    document.body.classList.toggle("lock");
+    iconMenu.classList.toggle("active-modal");
+    menuBody.classList.toggle("active-modal");
+  });
+}

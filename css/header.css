@@ -1,22 +1,49 @@
+/*
+* Prefixed by:
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .header {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .header-nav {
     margin: 22px 0 0 0;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+}
+
+.logo {
+    z-index: 102;
 }
 
 .nav-list {
     margin-left: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 72px;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -25,6 +52,8 @@
     font-weight: 500;
     color: #1b1717;
     position: relative;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
     transition: color 0.3s;
 }
 
@@ -40,6 +69,8 @@
     height: 2px;
     width: 0%;
     background: #810000;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -55,7 +86,8 @@
     width: 50%;
 }
 
-.consult-button {
+.consult-button,
+.burger-consult-button {
     margin: 0 0 0 58px;
     padding: 8px 42px;
     background: #1b1717;
@@ -65,39 +97,74 @@
     font-weight: 600;
     border-radius: 10px;
     cursor: pointer;
+    -webkit-transition:
+        background 0.3s,
+        color 0.3s;
+    -o-transition:
+        background 0.3s,
+        color 0.3s;
     transition:
         background 0.3s,
         color 0.3s;
     border: 2px solid #1b1717;
 }
 
-.consult-button:hover {
+.burger-consult-button {
+    margin: 0;
+    padding: 8px 0;
+    width: 100%;
+    max-width: 420px;
+}
+
+.consult-button:hover,
+.burger-consult-button:hover {
     background: transparent;
     color: #1b1717;
 }
 
 .header-content {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 98px 0 105px 0;
 }
 
 .left-header-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     width: 60%;
 }
+
+.mobile-header-image {
+    display: none;
+}
+
 .right-header-content {
     width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
 }
 
 .right-header-content img {
     width: 100%;
     max-width: 412px;
+    -o-object-fit: contain;
     object-fit: contain;
 }
 
@@ -107,8 +174,14 @@
     font-size: 18px;
     font-weight: 400;
     color: #1b1717;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     max-width: 252px;
     padding: 12px 0;
@@ -124,7 +197,11 @@
 }
 
 .bottom-header-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 12px;
 }
@@ -138,26 +215,43 @@
 }
 
 .header-action-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 36px;
     margin: 20px 0 0 0;
 }
 
 .header-action-button {
+    font-family: "TT Firs Neue";
     border-radius: 10px;
     background: #810000;
     font-size: 22px;
     font-weight: 600;
     color: #eeebdd;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     max-width: 260px;
     padding: 12px 0;
     width: 100%;
     border: none;
     cursor: pointer;
+    -webkit-transition:
+        color 0.3s,
+        background 0.3s;
+    -o-transition:
+        color 0.3s,
+        background 0.3s;
     transition:
         color 0.3s,
         background 0.3s;

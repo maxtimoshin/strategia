@@ -1,3 +1,10 @@
+/*
+* Prefixed by:
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 html,
 body,
 div,
@@ -92,6 +99,7 @@ video {
 
 * {
     -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 

@@ -1,12 +1,23 @@
+/*
+* Prefixed by:
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import "./header.css";
 @import "./main.css";
 @import "./footer.css";
-@import "./adaptive.css";
 @import "./burger-nav.css";
 @import "./fonts.css";
 @import "./normalize.css";
 @import "./accordion.css";
+@import "./adaptive.css";
 /* @import "./modal.css"; */
+
+body.lock {
+    overflow: hidden;
+}
 
 /* :root {
     --main-bg-color: #000;
@@ -28,18 +39,33 @@
 
 .wrapper {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     overflow: hidden;
 }
 
 .container {
     width: 100%;
-    max-width: 1126px;
+    max-width: calc(1126px + 48px);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    padding: 0 24px;
 }
 
 /* Custom input */
@@ -79,6 +105,8 @@
 
 /* Point the arrow upwards when the select box is open (active): */
 .select-selected.select-arrow-active:after {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
     background-image: url("../assets/images/select-arrow.svg");
     background-repeat: no-repeat;
@@ -130,17 +158,17 @@
 
 @media (-webkit-device-pixel-ratio: 1.25) {
     :root {
-        zoom: 0.8;
+        zoom: 1;
     }
 }
 @media (-webkit-device-pixel-ratio: 1.1) {
     :root {
-        zoom: 0.8;
+        zoom: 1;
     }
 }
 @media (-webkit-device-pixel-ratio: 1.5) {
     :root {
-        zoom: 0.8;
+        zoom: 1;
     }
 }
 @media (-webkit-device-pixel-ratio: 1.75) {

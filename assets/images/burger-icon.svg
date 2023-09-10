@@ -1,0 +1,22 @@
+<svg width="41" height="30" viewBox="0 0 41 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="41" height="30" fill="#F5F5F5"/>
+<g id="Mobile" clip-path="url(#clip0_440_17)">
+<rect width="375" height="11680" transform="translate(-314 -29)" fill="#EEEBDD"/>
+<g id="Group 4375">
+<g id="Group 4306">
+<path id="Vector 499" d="M4 6.11074C6.02954 5.94162 8.28422 5.04101 10.2987 4.60307C11.7435 4.28899 13.3924 4 14.872 4C17.5579 4 20.2438 4 22.9297 4C27.4906 4 32.0063 4.30154 36.5658 4.30154" stroke="#810000" stroke-width="7" stroke-linecap="round"/>
+</g>
+<g id="Group 4335">
+<path id="Vector 499_2" d="M4 16.1107C6.02954 15.9416 8.28422 15.041 10.2987 14.6031C11.7435 14.289 13.3924 14 14.872 14C17.5579 14 20.2438 14 22.9297 14C27.4906 14 32.0063 14.3015 36.5658 14.3015" stroke="#810000" stroke-width="7" stroke-linecap="round"/>
+</g>
+<g id="Group 4336">
+<path id="Vector 499_3" d="M4 26.1107C6.02954 25.9416 8.28422 25.041 10.2987 24.6031C11.7435 24.289 13.3924 24 14.872 24C17.5579 24 20.2438 24 22.9297 24C27.4906 24 32.0063 24.3015 36.5658 24.3015" stroke="#810000" stroke-width="7" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_440_17">
+<rect width="375" height="11680" fill="white" transform="translate(-314 -29)"/>
+</clipPath>
+</defs>
+</svg>

@@ -76,6 +76,7 @@
           <button type="submit" class="form-submit-button">замовити</button>
         </form>
       </div>
+
       <div class="success-modal">
         <img
           src="./assets/images/success-rocket.png"
@@ -110,10 +111,69 @@
             <button class="consult-button modal-action-button">
               консультація
             </button>
+            <div class="burger-menu">
+              <div class="menu-icon"></div>
+              <nav class="menu-body">
+                <div class="container">
+                  <nav class="menu-list">
+                    <ul>
+                      <li class="menu-item about-us-button"><a>про нас</a></li>
+                      <li class="menu-item approach-button"><a>підхід</a></li>
+                      <li class="menu-item cases-button"><a>кейси</a></li>
+                      <li class="menu-item services-button"><a>послуги</a></li>
+                    </ul>
+                    <button class="burger-consult-button modal-action-button">
+                      консультація
+                    </button>
+                  </nav>
+                </div>
+                <div class="menu-footer">
+                  <div class="container">
+                    <div class="burger-social">
+                      <a
+                        href="https://www.instagram.com/strategy.buro/"
+                        target="_blank"
+                        class="instagram"
+                      >
+                        <img
+                          src="./assets/images/instagram-icon.svg"
+                          alt=""
+                        />strategy.buro
+                      </a>
+                      <a
+                        href="https://www.facebook.com/strategy.buro/"
+                        target="_blank"
+                        class="facebook"
+                      >
+                        <img
+                          src="./assets/images/facebook-icon.svg"
+                          alt=""
+                        />strategy.buro
+                      </a>
+                      <a
+                        href="mailto:strategy.buro@gmail.com"
+                        target="_blank"
+                        class="email"
+                      >
+                        <img
+                          src="./assets/images/mail-icon.svg"
+                          alt=""
+                        />strategy.buro@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
           </div>
           <div class="header-content">
             <div class="left-header-content">
               <div class="header-content-label">створюємо стратегії</div>
+              <img
+                src="./assets/images/header-content-image.png"
+                class="mobile-header-image"
+                alt=""
+              />
               <div class="top-header-heading">привіт</div>
               <div class="bottom-header-heading">
                 <div class="large-bottom-heading">ми</div>
@@ -147,7 +207,7 @@
       </header>
       <main class="main">
         <div class="container">
-          <div class="block-title">
+          <div class="block-title about-us-block">
             <div class="upper-block-title">
               <div class="upper-block-title-text">ми</div>
               <div class="upper-block-title-line"></div>
@@ -202,7 +262,7 @@
               </div>
             </div>
           </div>
-          <div class="block-title">
+          <div class="block-title approach-block">
             <div class="upper-block-title">
               <div class="upper-block-title-text">а ще</div>
               <div class="upper-block-title-line"></div>
@@ -249,27 +309,33 @@
               <div class="work-type">
                 <img src="./assets/images/asterisk.svg" alt="" />
                 <div class="work-type-title">data-driven.</div>
-                <span class="work-type-item">crm — це наші</span>
-                <span class="work-type-item">аналітика — найкращі</span>
-                <span class="work-type-item">бізнес-процеси — друзі</span>
+                <span class="work-type-item">crm — <span>це наші</span></span>
+                <span class="work-type-item"
+                  >аналітика — <span>найкращі</span></span
+                >
+                <span class="work-type-item"
+                  >бізнес-процеси — <span>друзі</span></span
+                >
               </div>
               <div class="work-type">
                 <img src="./assets/images/asterisk.svg" alt="" />
                 <div class="work-type-title">професійно.</div>
 
                 <span class="work-type-item"
-                  >8 — ключових етапів створення стратегії</span
+                  >8 — <span class="hidden-text">ключових</span> етапів
+                  створення стратегії</span
                 >
                 <span class="work-type-item"
                   >27 — фреймворків та методологій</span
                 >
                 <span class="work-type-item"
-                  >50 — обовʼязкових задач для виконання</span
+                  >50 — <span class="hidden-text">обовʼязкових</span> задач для
+                  виконання</span
                 >
               </div>
             </div>
           </div>
-          <div class="block-title">
+          <div class="block-title services-scroll-block">
             <div class="upper-block-title">
               <div class="upper-block-title-text">наші</div>
               <div class="upper-block-title-line"></div>
@@ -281,8 +347,10 @@
               <div class="stages-content">
                 <div class="accordion-title">
                   маркетингова стратегія
-                  <div class="clock"></div>
-                  <span>1-3 місяці</span>
+                  <div class="services-mobile-wrapper">
+                    <div class="clock"></div>
+                    <span>1-3 місяці</span>
+                  </div>
                 </div>
                 <div class="accordion-cross"></div>
               </div>
@@ -295,7 +363,12 @@
                   послуга власників бізнесу та СМО.
                 </div>
                 <div class="service-action">
-                  <button class="modal-action-button">замовити</button>
+                  <button
+                    class="modal-action-button"
+                    data-value="маркетингова стратегія"
+                  >
+                    замовити
+                  </button>
                   <div class="service-price">від $4,500</div>
                 </div>
               </div>
@@ -304,8 +377,10 @@
               <div class="stages-content">
                 <div class="accordion-title">
                   брендинг та айдентика
-                  <div class="clock"></div>
-                  <span>2-3 місяці</span>
+                  <div class="services-mobile-wrapper">
+                    <div class="clock"></div>
+                    <span>2-3 місяці</span>
+                  </div>
                 </div>
                 <div class="accordion-cross"></div>
               </div>
@@ -317,7 +392,12 @@
                   або змінюються. ми створюємо новий візуал для нових стратегій
                 </div>
                 <div class="service-action">
-                  <button class="modal-action-button">замовити</button>
+                  <button
+                    class="modal-action-button"
+                    data-value="брендинг та айдентика"
+                  >
+                    замовити
+                  </button>
                   <div class="service-price">від $3,500</div>
                 </div>
               </div>
@@ -326,8 +406,10 @@
               <div class="stages-content">
                 <div class="accordion-title">
                   побудова відділу маркетингу
-                  <div class="clock"></div>
-                  <span>2-6 місяці</span>
+                  <div class="services-mobile-wrapper">
+                    <div class="clock"></div>
+                    <span>2-6 місяців</span>
+                  </div>
                 </div>
                 <div class="accordion-cross"></div>
               </div>
@@ -340,7 +422,12 @@
                   маркетингу, найм спеціалістів
                 </div>
                 <div class="service-action">
-                  <button class="modal-action-button">замовити</button>
+                  <button
+                    class="modal-action-button"
+                    data-value="побудова відділу маркетингу"
+                  >
+                    замовити
+                  </button>
                   <div class="service-price">від $5,000</div>
                 </div>
               </div>
@@ -349,8 +436,10 @@
               <div class="stages-content">
                 <div class="accordion-title">
                   аудит маркетингу та стратегічна сесія
-                  <div class="clock"></div>
-                  <span>1-14 днів</span>
+                  <div class="services-mobile-wrapper">
+                    <div class="clock"></div>
+                    <span>1-14 днів</span>
+                  </div>
                 </div>
                 <div class="accordion-cross"></div>
               </div>
@@ -362,7 +451,12 @@
                   в своєму бізнесі та куди рухатись далі
                 </div>
                 <div class="service-action">
-                  <button class="modal-action-button">замовити</button>
+                  <button
+                    class="modal-action-button"
+                    data-value="аудит маркетингу"
+                  >
+                    замовити
+                  </button>
                   <div class="service-price">від $1,000</div>
                 </div>
               </div>
@@ -371,8 +465,10 @@
               <div class="stages-content">
                 <div class="accordion-title">
                   консультація
-                  <div class="clock"></div>
-                  <span>1 година</span>
+                  <div class="services-mobile-wrapper">
+                    <div class="clock"></div>
+                    <span>1 година</span>
+                  </div>
                 </div>
                 <div class="accordion-cross"></div>
               </div>
@@ -384,13 +480,15 @@
                   питання-відповідь
                 </div>
                 <div class="service-action">
-                  <button class="modal-action-button">замовити</button>
+                  <button class="modal-action-button" data-value="консультація">
+                    замовити
+                  </button>
                   <div class="service-price">$150</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="block-title">
+          <div class="block-title cases-scroll-block">
             <div class="upper-block-title">
               <div class="upper-block-title-text">наші</div>
               <div class="upper-block-title-line"></div>
@@ -536,11 +634,14 @@
             </div>
             <div class="tasks-grid">
               <div class="single-task task1">
-                визначити мету та цілі роботи компанії
+                визначити мету та цілі роботи
+                <span class="hidden-text">&nbsp компанії</span>
               </div>
               <div class="single-task task2">створити конкурентну перевагу</div>
               <div class="single-task task3">
-                оновити цілі компанії та інструменти
+                оновити цілі
+                <span class="hidden-text">компанії &nbsp</span>
+                та інструменти
               </div>
               <div class="single-task task4">визначити потреби споживачів</div>
               <div class="single-task task5">
@@ -617,8 +718,10 @@
                       type="text"
                     />
                     <div class="custom-select">
-                      <select>
-                        <option value="0">послуга</option>
+                      <select class="select-box">
+                        <option value="0" class="current-option">
+                          послуга
+                        </option>
                         <option value="1">маркетингова стратегія</option>
                         <option value="2">брендинг та айдентика</option>
                         <option value="3">побудова відділу маркетингу</option>
@@ -640,9 +743,10 @@
           </div>
           <div class="block-title">
             <div class="upper-block-title">
-              <div class="upper-block-title-text">кілька фактів про досвід</div>
+              <div class="upper-block-title-text">кілька фактів</div>
               <div class="upper-block-title-line"></div>
             </div>
+            <div class="lower-block-title-text">про досвід</div>
           </div>
           <div class="experience-block">
             <div class="experience-item">
@@ -689,13 +793,21 @@
       <footer class="footer">
         <div class="container footer-container">
           <div class="footer-social">
-            <a href="" target="_blank" class="instagram">
+            <a
+              href="https://www.instagram.com/strategy.buro/"
+              target="_blank"
+              class="instagram"
+            >
               <img
                 src="./assets/images/instagram-icon.svg"
                 alt=""
               />strategy.buro
             </a>
-            <a href="" target="_blank" class="facebook">
+            <a
+              href="https://www.facebook.com/strategy.buro/"
+              target="_blank"
+              class="facebook"
+            >
               <img
                 src="./assets/images/facebook-icon.svg"
                 alt=""
