@@ -19,12 +19,15 @@ function modalVisibilityHandler() {
   successModal.classList.remove("visible");
 }
 
+let currentSelectState;
+
 if (modalActionButtons) {
   modalActionButtons.forEach((button) => {
     button.addEventListener("click", (e) => {
       if (e.target.dataset.value) {
         document.querySelector(".select-selected").innerHTML =
           e.target.dataset.value;
+        currentSelectState = e.target.dataset.value;
       }
       modalVisibilityHandler();
       modalContent.classList.remove("hidden");
@@ -128,7 +131,7 @@ for (i = 0; i < l; i++) {
     c = document.createElement("DIV");
     c.innerHTML = selElmnt.options[j].innerHTML;
     c.addEventListener("click", function (e) {
-      console.log("select choosed");
+      currentSelectState = e.target.innerText;
       /* When an item is clicked, update the original select box,
         and the selected item: */
       var y, i, k, s, h, sl, yl;
@@ -202,3 +205,162 @@ if (iconMenu) {
     menuBody.classList.toggle("active-modal");
   });
 }
+
+const modalCompanyInput = document.querySelector(".modal-company-input");
+const modalNameInput = document.querySelector(".modal-name-input");
+const modalJobTitleInput = document.querySelector(".modal-job-title-input");
+const modalPhoneInput = document.querySelector(".modal-phone-input");
+const modalEmailInput = document.querySelector(".modal-email-input");
+// const modalServiceInput = document.querySelector(".modal-company-input");
+
+const companyInput = document.querySelector(".company-input");
+const nameInput = document.querySelector(".name-input");
+const jobTitleInput = document.querySelector(".job-title-input");
+const phoneInput = document.querySelector(".phone-input");
+const emailInput = document.querySelector(".email-input");
+const serviceInput = document.querySelector(".selected-select");
+
+const modalSubmit = document.querySelector(".modal-submit-button");
+const nonModalSubmit = document.querySelector(".non-modal-submit-button");
+
+// const tg = {
+//   token: "6085056793:AAF_0eCpKDztTxm4h0WApwugbeGaKcqcTlk",
+// };
+
+// const userIds = ["256599204"];
+
+// Bot TEST
+const tg = {
+  token: "6449863246:AAH5RClB79SPPO0Bc5jn2czbLdW79VTgYxM",
+};
+
+const userIds = ["261206896"];
+
+// BOT TEST END
+
+function sendMessage(text, userId) {
+  const encodedText = encodeURIComponent(text);
+  const url = `https://api.telegram.org/bot${tg.token}/sendMessage?chat_id=${userId}&text=${encodedText}`; // The url to request
+  const xht = new XMLHttpRequest();
+  xht.open("GET", url);
+  xht.send();
+}
+
+function getCurrentDateAndTime() {
+  const currentDate = new Date();
+
+  const year = currentDate.getFullYear();
+  const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+  const day = String(currentDate.getDate()).padStart(2, "0");
+  const hours = String(currentDate.getHours()).padStart(2, "0");
+  const minutes = String(currentDate.getMinutes()).padStart(2, "0");
+  const seconds = String(currentDate.getSeconds()).padStart(2, "0");
+
+  const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
+  return formattedDateTime;
+}
+
+function createCrmOrder(company, name, jobTitle, phone, email, option) {
+  const url = "https://openapi.keycrm.app/v1/order";
+  const bearerToken = "MmM2NDZlYWJlZDE1NjJkZThjYzBjZGZjYmE3ODcyNjQ2OTkxYjA2Ng"; // Replace with your actual Bearer token
+
+  const requestBody = {
+    source_id: 4,
+    source_uuid: "115",
+    buyer_comment: "Form request from Strategia Agency landing page",
+    manager_id: 1,
+    manager_comment: "Form request from Strategia Agency landing page",
+    promocode: "-",
+    discount_percent: 0,
+    discount_amount: 0,
+    shipping_price: 0,
+    wrap_price: 0,
+    taxes: 0,
+    ordered_at: getCurrentDateAndTime(),
+    buyer: {
+      full_name: name,
+      email: email,
+      phone: phone,
+    },
+    custom_fields: [
+      {
+        uuid: "OR_1037",
+        value: "Лорд",
+      },
+    ],
+  };
+
+  fetch(url, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${bearerToken}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(requestBody),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      // Handle the response data here
+      console.log("Response:", data);
+    })
+    .catch((error) => {
+      // Handle errors here
+      console.error("Error:", error);
+    });
+}
+
+modalSubmit.addEventListener("click", (e) => {
+  e.preventDefault();
+  for (singleUserId of userIds) {
+    sendMessage(
+      `   
+      Strategia Form Request
+          Company: ${modalCompanyInput.value}
+          Name : ${modalNameInput.value}
+          Job Title : ${modalJobTitleInput.value}
+          Phone : ${modalPhoneInput.value}
+          Email : ${modalEmailInput.value}
+          Service : ${currentSelectState}`,
+      singleUserId
+    );
+  }
+  createCrmOrder(
+    modalCompanyInput.value,
+    modalNameInput.value,
+    modalJobTitleInput.value,
+    modalPhoneInput.value,
+    modalEmailInput.value,
+    currentSelectState
+  );
+});
+
+nonModalSubmit.addEventListener("click", (e) => {
+  e.preventDefault();
+  for (singleUserId of userIds) {
+    sendMessage(
+      `
+      Strategia Form Request
+          Company: ${companyInput.value}
+          Name : ${nameInput.value}
+          Job Title : ${jobTitleInput.value}
+          Phone : ${phoneInput.value}
+          Email : ${emailInput.value}
+          Service : ${currentSelectState}`,
+      singleUserId
+    );
+  }
+  createCrmOrder(
+    companyInput.value,
+    nameInput.value,
+    jobTitleInput.value,
+    phoneInput.value,
+    emailInput.value,
+    currentSelectState
+  );
+});

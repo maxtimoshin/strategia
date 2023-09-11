@@ -33,6 +33,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    transition: all 0.3s;
 }
 
 .accordion.active .accordion-cross {
