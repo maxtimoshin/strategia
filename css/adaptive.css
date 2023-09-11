@@ -309,11 +309,14 @@
         text-align: center;
     }
     .upper-personal-quote {
-        font-size: 45px;
+        font-size: 34px;
         line-height: normal;
         margin: 40px 0;
+        padding-left: 30px;
     }
     .absolute-logo-icon::before {
+        width: 34px;
+        height: 34px;
         top: 50%;
         left: -50px;
         -webkit-transform: translateY(-50%);
@@ -405,6 +408,7 @@
     .form-modal-content,
     .success-modal {
         padding: 32px 24px;
+        width: 90%;
     }
     .form-modal-content {
         gap: 30px;
@@ -420,5 +424,11 @@
     }
     .success-modal span {
         font-size: 18px;
+    }
+}
+
+@media (min-width: 360px) and (max-width: 600px) {
+    :root {
+        zoom: 1 !important;
     }
 }

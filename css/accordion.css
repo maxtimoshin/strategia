@@ -29,15 +29,18 @@
 .accordion-cross {
     width: 32px;
     height: 36px;
-    background-image: url("../assets/images/cross-closed.svg");
+    background: url("../assets/images/cross-closed.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: all 0.3s;
+    /* transition: background 0.3s; */
 }
 
 .accordion.active .accordion-cross {
-    background-image: url("../assets/images/cross-opened.svg");
+    background: url("../assets/images/cross-opened.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .stages-content {

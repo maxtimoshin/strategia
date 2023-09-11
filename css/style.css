@@ -156,6 +156,31 @@ body.lock {
     }
 } */
 
+.form-alert {
+    position: fixed;
+    top: 20px;
+    right: 16px;
+    z-index: 9999999;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    line-height: 130%;
+    background: #c44a4a;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(40px);
+}
+
+.visible-alert {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+}
+
 @media (-webkit-device-pixel-ratio: 1.25) {
     :root {
         zoom: 1;

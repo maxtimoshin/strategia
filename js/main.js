@@ -56,6 +56,7 @@ if (modalContent) {
       menuBody.classList.remove("active-modal");
     }
   });
+
   document.addEventListener("click", (e) => {
     if (e.target === modalWrapper) {
       modalVisibilityHandler();
@@ -70,13 +71,13 @@ function showSuccessMessage(e) {
   successModal.classList.add("visible");
 }
 
-if (formSubmitButtons) {
-  formSubmitButtons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      showSuccessMessage(e);
-    });
-  });
-}
+// if (formSubmitButtons) {
+//   formSubmitButtons.forEach((button) => {
+//     button.addEventListener("click", (e) => {
+//       showSuccessMessage(e);
+//     });
+//   });
+// }
 
 // Scroll To Buttons
 const aboutUsButton = document.querySelectorAll(".about-us-button");
@@ -101,8 +102,8 @@ function scrollingToBlock(btn, block) {
     });
   });
 }
-// ScrollTo listeners
 
+// ScrollTo listeners
 scrollingToBlock(aboutUsButton, aboutUsBlock);
 scrollingToBlock(approachButton, approachBlock);
 scrollingToBlock(casesButton, casesBlock);
@@ -296,6 +297,9 @@ function createCrmOrder(company, name, jobTitle, phone, email, option) {
     headers: {
       Authorization: `Bearer ${bearerToken}`,
       "Content-Type": "application/json",
+      Accept: "application/json",
+      "Cache-Control": "no-cache",
+      Pragma: "no-cache",
     },
     body: JSON.stringify(requestBody),
   })
@@ -315,36 +319,65 @@ function createCrmOrder(company, name, jobTitle, phone, email, option) {
     });
 }
 
+const formAlert = document.querySelector(".form-alert");
+
+function showFormAlert() {
+  formAlert.classList.add("visible-alert");
+  setTimeout(() => {
+    formAlert.classList.remove("visible-alert");
+  }, 2000);
+}
+
 modalSubmit.addEventListener("click", (e) => {
   e.preventDefault();
-  for (singleUserId of userIds) {
-    sendMessage(
-      `   
-      Strategia Form Request
-          Company: ${modalCompanyInput.value}
-          Name : ${modalNameInput.value}
-          Job Title : ${modalJobTitleInput.value}
-          Phone : ${modalPhoneInput.value}
-          Email : ${modalEmailInput.value}
-          Service : ${currentSelectState}`,
-      singleUserId
-    );
-  }
-  createCrmOrder(
-    modalCompanyInput.value,
-    modalNameInput.value,
-    modalJobTitleInput.value,
-    modalPhoneInput.value,
-    modalEmailInput.value,
+  if (
+    modalCompanyInput.value &&
+    modalNameInput.value &&
+    modalJobTitleInput.value &&
+    modalPhoneInput.value &&
+    modalEmailInput.value &&
     currentSelectState
-  );
+  ) {
+    for (singleUserId of userIds) {
+      sendMessage(
+        `   
+        Strategia Form Request
+            Company: ${modalCompanyInput.value}
+            Name : ${modalNameInput.value}
+            Job Title : ${modalJobTitleInput.value}
+            Phone : ${modalPhoneInput.value}
+            Email : ${modalEmailInput.value}
+            Service : ${currentSelectState}`,
+        singleUserId
+      );
+    }
+    createCrmOrder(
+      modalCompanyInput.value,
+      modalNameInput.value,
+      modalJobTitleInput.value,
+      modalPhoneInput.value,
+      modalEmailInput.value,
+      currentSelectState
+    );
+    showSuccessMessage(e);
+  } else {
+    showFormAlert();
+  }
 });
 
 nonModalSubmit.addEventListener("click", (e) => {
   e.preventDefault();
-  for (singleUserId of userIds) {
-    sendMessage(
-      `
+  if (
+    companyInput.value &&
+    nameInput.value &&
+    jobTitleInput.value &&
+    phoneInput.value &&
+    emailInput.value &&
+    currentSelectState
+  ) {
+    for (singleUserId of userIds) {
+      sendMessage(
+        `
       Strategia Form Request
           Company: ${companyInput.value}
           Name : ${nameInput.value}
@@ -352,15 +385,19 @@ nonModalSubmit.addEventListener("click", (e) => {
           Phone : ${phoneInput.value}
           Email : ${emailInput.value}
           Service : ${currentSelectState}`,
-      singleUserId
+        singleUserId
+      );
+    }
+    createCrmOrder(
+      companyInput.value,
+      nameInput.value,
+      jobTitleInput.value,
+      phoneInput.value,
+      emailInput.value,
+      currentSelectState
     );
+    showSuccessMessage(e);
+  } else {
+    showFormAlert();
   }
-  createCrmOrder(
-    companyInput.value,
-    nameInput.value,
-    jobTitleInput.value,
-    phoneInput.value,
-    emailInput.value,
-    currentSelectState
-  );
 });
