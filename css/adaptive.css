@@ -5,6 +5,12 @@
 * Browsers: last 4 version
 */
 
+@media (min-width: 1440px) and (max-width: 2561px) {
+    :root {
+        zoom: 1.35 !important;
+    }
+}
+
 @media (max-width: 900px) {
     .nav-list,
     .consult-button {
