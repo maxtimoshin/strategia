@@ -247,78 +247,6 @@ function sendMessage(text, userId) {
   xht.send();
 }
 
-function getCurrentDateAndTime() {
-  const currentDate = new Date();
-
-  const year = currentDate.getFullYear();
-  const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Months are zero-based
-  const day = String(currentDate.getDate()).padStart(2, "0");
-  const hours = String(currentDate.getHours()).padStart(2, "0");
-  const minutes = String(currentDate.getMinutes()).padStart(2, "0");
-  const seconds = String(currentDate.getSeconds()).padStart(2, "0");
-
-  const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
-
-  return formattedDateTime;
-}
-
-function createCrmOrder(company, name, jobTitle, phone, email, option) {
-  const url = "https://openapi.keycrm.app/v1/order";
-  const bearerToken = "MmM2NDZlYWJlZDE1NjJkZThjYzBjZGZjYmE3ODcyNjQ2OTkxYjA2Ng"; // Replace with your actual Bearer token
-
-  const requestBody = {
-    source_id: 4,
-    source_uuid: "115",
-    buyer_comment: "Form request from Strategia Agency landing page",
-    manager_id: 1,
-    manager_comment: "Form request from Strategia Agency landing page",
-    promocode: "-",
-    discount_percent: 0,
-    discount_amount: 0,
-    shipping_price: 0,
-    wrap_price: 0,
-    taxes: 0,
-    ordered_at: getCurrentDateAndTime(),
-    buyer: {
-      full_name: name,
-      email: email,
-      phone: phone,
-    },
-    custom_fields: [
-      {
-        uuid: "OR_1037",
-        value: "Лорд",
-      },
-    ],
-  };
-
-  fetch(url, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${bearerToken}`,
-      "Content-Type": "application/json",
-      Accept: "application/json",
-      "Cache-Control": "no-cache",
-      Pragma: "no-cache",
-    },
-    body: JSON.stringify(requestBody),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
-    })
-    .then((data) => {
-      // Handle the response data here
-      console.log("Response:", data);
-    })
-    .catch((error) => {
-      // Handle errors here
-      console.error("Error:", error);
-    });
-}
-
 const formAlert = document.querySelector(".form-alert");
 
 function showFormAlert() {
@@ -326,6 +254,33 @@ function showFormAlert() {
   setTimeout(() => {
     formAlert.classList.remove("visible-alert");
   }, 2000);
+}
+
+function generateOrderRequest(company, name, jobTitle, phone, email, option) {
+  const url = "http://localhost:3003/test";
+
+  const requestBody = { company, name, jobTitle, phone, email, option };
+
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(requestBody),
+  });
+}
+
+function clearInputs() {
+  modalCompanyInput.value = "";
+  modalNameInput.value = "";
+  modalJobTitleInput.value = "";
+  modalPhoneInput.value = "";
+  modalEmailInput.value = "";
+  companyInput.value = "";
+  nameInput.value = "";
+  jobTitleInput.value = "";
+  phoneInput.value = "";
+  emailInput.value = "";
 }
 
 modalSubmit.addEventListener("click", (e) => {
@@ -340,7 +295,7 @@ modalSubmit.addEventListener("click", (e) => {
   ) {
     for (singleUserId of userIds) {
       sendMessage(
-        `   
+        `
         Strategia Form Request
             Company: ${modalCompanyInput.value}
             Name : ${modalNameInput.value}
@@ -351,7 +306,7 @@ modalSubmit.addEventListener("click", (e) => {
         singleUserId
       );
     }
-    createCrmOrder(
+    generateOrderRequest(
       modalCompanyInput.value,
       modalNameInput.value,
       modalJobTitleInput.value,
@@ -360,6 +315,7 @@ modalSubmit.addEventListener("click", (e) => {
       currentSelectState
     );
     showSuccessMessage(e);
+    clearInputs();
   } else {
     showFormAlert();
   }
@@ -388,7 +344,7 @@ nonModalSubmit.addEventListener("click", (e) => {
         singleUserId
       );
     }
-    createCrmOrder(
+    generateOrderRequest(
       companyInput.value,
       nameInput.value,
       jobTitleInput.value,
@@ -397,6 +353,7 @@ nonModalSubmit.addEventListener("click", (e) => {
       currentSelectState
     );
     showSuccessMessage(e);
+    clearInputs();
   } else {
     showFormAlert();
   }
