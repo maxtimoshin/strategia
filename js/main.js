@@ -257,7 +257,7 @@ function showFormAlert() {
 }
 
 function generateOrderRequest(company, name, jobTitle, phone, email, option) {
-  const url = "http://localhost:3003/test";
+  const url = "https://courageous-shift-elk.cyclic.cloud/createOrder";
 
   const requestBody = { company, name, jobTitle, phone, email, option };
 
