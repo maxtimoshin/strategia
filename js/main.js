@@ -224,20 +224,11 @@ const serviceInput = document.querySelector(".selected-select");
 const modalSubmit = document.querySelector(".modal-submit-button");
 const nonModalSubmit = document.querySelector(".non-modal-submit-button");
 
-// const tg = {
-//   token: "6085056793:AAF_0eCpKDztTxm4h0WApwugbeGaKcqcTlk",
-// };
-
-// const userIds = ["256599204"];
-
-// Bot TEST
 const tg = {
-  token: "6449863246:AAH5RClB79SPPO0Bc5jn2czbLdW79VTgYxM",
+  token: "6085056793:AAF_0eCpKDztTxm4h0WApwugbeGaKcqcTlk",
 };
 
-const userIds = ["261206896"];
-
-// BOT TEST END
+const userIds = ["256599204"];
 
 function sendMessage(text, userId) {
   const encodedText = encodeURIComponent(text);

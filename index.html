@@ -75,7 +75,11 @@
               </select>
             </div>
           </div>
-          <button type="submit" class="form-submit-button modal-submit-button">
+          <button
+            type="submit"
+            onclick="console.log('test')"
+            class="form-submit-button modal-submit-button"
+          >
             замовити
           </button>
         </form>
@@ -135,24 +139,14 @@
                   <div class="container">
                     <div class="burger-social">
                       <a
-                        href="https://www.instagram.com/strategy.buro/"
+                        href="https://www.instagram.com/gutnichenko/"
                         target="_blank"
                         class="instagram"
                       >
                         <img
                           src="./assets/images/instagram-icon.svg"
                           alt=""
-                        />strategy.buro
-                      </a>
-                      <a
-                        href="https://www.facebook.com/strategy.buro/"
-                        target="_blank"
-                        class="facebook"
-                      >
-                        <img
-                          src="./assets/images/facebook-icon.svg"
-                          alt=""
-                        />strategy.buro
+                        />gutnichenko
                       </a>
                       <a
                         href="mailto:strategy.buro@gmail.com"
@@ -172,26 +166,28 @@
           </div>
           <div class="header-content">
             <div class="left-header-content">
-              <div class="header-content-label">створюємо стратегії</div>
-              <img
-                src="./assets/images/header-content-image.png"
-                class="mobile-header-image"
-                alt=""
-              />
-              <div class="top-header-heading">привіт</div>
+              <div class="header-content-label">
+                створюю маркетингові стратегії
+              </div>
+              <div class="mobile-header-image">
+                <img src="./assets/images/person-picture.webp" alt="" />
+                <span>Гутніченко Євгеній</span>
+                (а це, власне, я)
+              </div>
+              <div class="top-header-heading">привіт, я</div>
               <div class="bottom-header-heading">
-                <div class="large-bottom-heading">ми</div>
-                <div class="small-bottom-heading">
+                <div class="large-bottom-heading">стратег</div>
+                <!-- <div class="small-bottom-heading">
                   бюро<br />
                   стратегія
-                </div>
+                </div> -->
               </div>
               <div class="header-action-block">
                 <button class="header-action-button modal-action-button">
                   познайомитись
                 </button>
                 <span class="header-action-description"
-                  >допомагаємо бізнесу зростати структурно. покроково.
+                  >допомагаю бізнесами зростати структурно. покроково.
                   результативно.</span
                 >
               </div>
@@ -204,7 +200,9 @@
               </div>
             </div>
             <div class="right-header-content">
-              <img src="./assets/images/header-content-image.png" alt="" />
+              <img src="./assets/images/person-picture.webp" alt="" />
+              <span>Гутніченко Євгеній</span>
+              (а це, власне, я)
             </div>
           </div>
         </div>
@@ -213,10 +211,10 @@
         <div class="container">
           <div class="block-title about-us-block">
             <div class="upper-block-title">
-              <div class="upper-block-title-text">ми</div>
+              <div class="upper-block-title-text">працюю для:</div>
               <div class="upper-block-title-line"></div>
             </div>
-            <div class="lower-block-title-text">працюємо для:</div>
+            <!-- <div class="lower-block-title-text">працюємо для:</div> -->
           </div>
           <div class="working-for-block">
             <div class="working-for-title">бізнесу</div>
@@ -236,7 +234,7 @@
               <div class="upper-block-title-line"></div>
             </div>
             <div class="lower-block-title-text">
-              епітети про <span>наших</span> клієнтів:
+              епітети про <span>«моїх»</span> клієнтів:
             </div>
           </div>
           <div class="epithets-block">
@@ -273,7 +271,7 @@
             </div>
           </div>
           <div class="benefits-block">
-            <div class="benefits-title">ми:</div>
+            <!-- <div class="benefits-title">ми:</div> -->
             <ul class="benefits-list">
               <li>
                 <img src="./assets/images/asterisk.svg" alt="" />створюємо
@@ -291,29 +289,31 @@
           </div>
           <div class="block-title">
             <div class="upper-block-title">
-              <div class="upper-block-title-text">нам</div>
+              <div class="upper-block-title-text">мені</div>
               <div class="upper-block-title-line"></div>
             </div>
           </div>
           <div class="how-we-work-block">
             <div class="how-we-work-title">довіряють</div>
-            <div class="how-we-work-subtitle">бо ми працюємо:</div>
+            <div class="how-we-work-subtitle">бо працюю:</div>
             <div class="how-we-work-types">
               <div class="work-type">
                 <img src="./assets/images/asterisk.svg" alt="" />
                 <div class="work-type-title">системно.</div>
-                <span class="work-type-item">для планування — scrum.</span>
+                <span class="work-type-item"
+                  >для планування — kanban + waterfall.</span
+                >
                 <span class="work-type-item"
                   >для управління — таск-менеджер.</span
                 >
                 <span class="work-type-item"
-                  >для синхронізації — дзвінки сторі-поінти.</span
+                  >для синхронізації — дзвінки дзвінки.</span
                 >
               </div>
               <div class="work-type">
                 <img src="./assets/images/asterisk.svg" alt="" />
                 <div class="work-type-title">data-driven.</div>
-                <span class="work-type-item">crm — <span>це наші</span></span>
+                <span class="work-type-item">crm — <span>це мої</span></span>
                 <span class="work-type-item"
                   >аналітика — <span>найкращі</span></span
                 >
@@ -326,22 +326,20 @@
                 <div class="work-type-title">професійно.</div>
 
                 <span class="work-type-item"
-                  >8 — <span class="hidden-text">ключових</span> етапів
-                  створення стратегії</span
+                  >8 — етапів розробки стратегії</span
                 >
                 <span class="work-type-item"
-                  >27 — фреймворків та методологій</span
+                  >27 — фреймворків використовую</span
                 >
                 <span class="work-type-item"
-                  >50 — <span class="hidden-text">обовʼязкових</span> задач для
-                  виконання</span
+                  >50+ — готових стратегій в запасі</span
                 >
               </div>
             </div>
           </div>
           <div class="block-title services-scroll-block">
             <div class="upper-block-title">
-              <div class="upper-block-title-text">наші</div>
+              <div class="upper-block-title-text">про</div>
               <div class="upper-block-title-line"></div>
             </div>
             <div class="lower-block-title-text">послуги:</div>
@@ -494,7 +492,7 @@
           </div>
           <div class="block-title cases-scroll-block">
             <div class="upper-block-title">
-              <div class="upper-block-title-text">наші</div>
+              <div class="upper-block-title-text">мої</div>
               <div class="upper-block-title-line"></div>
             </div>
           </div>
@@ -515,7 +513,7 @@
                   <div class="case-result">
                     <div class="case-result-title">результат:</div>
                     <div class="case-result-description">
-                      Зростання прибутку на 200%. Ріст доходу  з $500к до $1млн
+                      Зростання прибутку на 200%. Ріст доходу з $500к до $1млн
                       на місяць. Оптимізація команди з 30 до 20 людей, найм
                       middle та senior спеціалістів. Побудова системи звітності
                       та аналітики. Найм СМО.
@@ -582,7 +580,7 @@
                     <div class="case-result-title">результат:</div>
                     <div class="case-result-description">
                       Клієнт вже перезапустив 2 оффлайн локації та почав
-                      e-commerce продажі.  Рухається відповідно маркетинговій
+                      e-commerce продажі. Рухається відповідно маркетинговій
                       стратегії, в якій детально пропрацьовано CJM та ToV і
                       рекламну стратегію.
                     </div>
@@ -662,11 +660,11 @@
           </div>
           <div class="block-title">
             <div class="upper-block-title">
-              <div class="upper-block-title-text">ми</div>
+              <div class="upper-block-title-text">я</div>
               <div class="upper-block-title-line"></div>
             </div>
             <div class="lower-block-title-text">
-              віримо, що бізнес — завжди особисте.
+              вірю, що бізнес — завжди особисте.
             </div>
           </div>
           <div class="personal-block">
@@ -743,7 +741,7 @@
                 </form>
                 <div class="user-label">
                   Євгеній
-                  <span>(людина з якою ви будете спілкуватись)</span>
+                  <span>(ще раз моє фото, якщо ви забули як виглядаю)</span>
                 </div>
               </div>
             </div>
@@ -795,30 +793,28 @@
               </div>
             </div>
           </div>
+          <div class="course-block">
+            <img src="./assets/images/asterisk.svg" alt="" />
+            <p>
+              якщо ви хочете навчитись<br />
+              створювати стратегії <span>самостійно</span>
+            </p>
+            то пропоную перейти на сайт курсу «все по ... плану»
+            <a href="https://vsepoplany.com/" target="_blank">
+              <button>перейти</button>
+            </a>
+          </div>
         </div>
       </main>
       <footer class="footer">
         <div class="container footer-container">
           <div class="footer-social">
             <a
-              href="https://www.instagram.com/strategy.buro/"
+              href="https://www.instagram.com/gutnichenko/"
               target="_blank"
               class="instagram"
             >
-              <img
-                src="./assets/images/instagram-icon.svg"
-                alt=""
-              />strategy.buro
-            </a>
-            <a
-              href="https://www.facebook.com/strategy.buro/"
-              target="_blank"
-              class="facebook"
-            >
-              <img
-                src="./assets/images/facebook-icon.svg"
-                alt=""
-              />strategy.buro
+              <img src="./assets/images/instagram-icon.svg" alt="" />gutnichenko
             </a>
             <a
               href="mailto:strategy.buro@gmail.com"

@@ -218,6 +218,7 @@
     -ms-flex-pack: justify;
     justify-content: space-between;
     margin: 30px 0;
+    justify-content: center;
 }
 
 .benefits-title {
@@ -1059,4 +1060,48 @@
 .experience-description {
     font-weight: 400;
     font-size: 20px;
+}
+
+.course-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+    line-height: normal;
+    margin: 0 0 100px 0;
+}
+.course-block img {
+    width: 100%;
+    max-width: 90px;
+}
+
+.course-block p {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.course-block p span {
+    color: #810000;
+}
+
+.course-block a button {
+    padding: 10px 90px;
+    background: #810000;
+    border: 2px solid #810000;
+    transition: all 0.3s;
+    font-size: 24px;
+    font-weight: 400;
+    color: #eeebdd;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.course-block a button:hover {
+    background: #eeebdd;
+    color: #810000;
 }
