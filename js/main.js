@@ -240,17 +240,33 @@ function sendMessage(text, userId) {
 
 const formAlert = document.querySelector(".form-alert");
 
-function showFormAlert() {
+function showFormAlert(alertText) {
+  formAlert.innerText = alertText;
   formAlert.classList.add("visible-alert");
-  setTimeout(() => {
+  let timeoutId = setTimeout(() => {
     formAlert.classList.remove("visible-alert");
-  }, 2000);
+    formAlert.innerText = "";
+    clearTimeout(timeoutId);
+  }, 2500);
+}
+
+function validateEmail(email) {
+  const emailRegex = /\S+@\S+\.\S+/;
+  return emailRegex.test(email);
 }
 
 function generateOrderRequest(company, name, jobTitle, phone, email, option) {
-  const url = "https://courageous-shift-elk.cyclic.cloud/createOrder";
+  const url = "https://lovely-mite-sombrero.cyclic.cloud/createOrder";
 
-  const requestBody = { company, name, jobTitle, phone, email, option };
+  const requestBody = {
+    company,
+    name,
+    jobTitle,
+    phone,
+    email,
+    option,
+    funnelId: 2,
+  };
 
   fetch(url, {
     method: "POST",
@@ -284,9 +300,10 @@ modalSubmit.addEventListener("click", (e) => {
     modalEmailInput.value &&
     currentSelectState
   ) {
-    for (singleUserId of userIds) {
-      sendMessage(
-        `
+    if (validateEmail(modalEmailInput.value)) {
+      for (singleUserId of userIds) {
+        sendMessage(
+          `
         Strategia Form Request
             Company: ${modalCompanyInput.value}
             Name : ${modalNameInput.value}
@@ -294,21 +311,24 @@ modalSubmit.addEventListener("click", (e) => {
             Phone : ${modalPhoneInput.value}
             Email : ${modalEmailInput.value}
             Service : ${currentSelectState}`,
-        singleUserId
+          singleUserId
+        );
+      }
+      generateOrderRequest(
+        modalCompanyInput.value,
+        modalNameInput.value,
+        modalJobTitleInput.value,
+        modalPhoneInput.value,
+        modalEmailInput.value,
+        currentSelectState
       );
+      showSuccessMessage(e);
+      clearInputs();
+    } else {
+      showFormAlert("Email повинен бути у форматі test@mail.com");
     }
-    generateOrderRequest(
-      modalCompanyInput.value,
-      modalNameInput.value,
-      modalJobTitleInput.value,
-      modalPhoneInput.value,
-      modalEmailInput.value,
-      currentSelectState
-    );
-    showSuccessMessage(e);
-    clearInputs();
   } else {
-    showFormAlert();
+    showFormAlert("Будь ласка, заповніть всі поля.");
   }
 });
 
@@ -322,30 +342,34 @@ nonModalSubmit.addEventListener("click", (e) => {
     emailInput.value &&
     currentSelectState
   ) {
-    for (singleUserId of userIds) {
-      sendMessage(
-        `
-      Strategia Form Request
-          Company: ${companyInput.value}
-          Name : ${nameInput.value}
-          Job Title : ${jobTitleInput.value}
-          Phone : ${phoneInput.value}
-          Email : ${emailInput.value}
-          Service : ${currentSelectState}`,
-        singleUserId
+    if (validateEmail(emailInput.value)) {
+      for (singleUserId of userIds) {
+        sendMessage(
+          `
+        Strategia Form Request
+            Company: ${companyInput.value}
+            Name : ${nameInput.value}
+            Job Title : ${jobTitleInput.value}
+            Phone : ${phoneInput.value}
+            Email : ${emailInput.value}
+            Service : ${currentSelectState}`,
+          singleUserId
+        );
+      }
+      generateOrderRequest(
+        companyInput.value,
+        nameInput.value,
+        jobTitleInput.value,
+        phoneInput.value,
+        emailInput.value,
+        currentSelectState
       );
+      showSuccessMessage(e);
+      clearInputs();
+    } else {
+      showFormAlert("Email повинен бути у форматі test@mail.com");
     }
-    generateOrderRequest(
-      companyInput.value,
-      nameInput.value,
-      jobTitleInput.value,
-      phoneInput.value,
-      emailInput.value,
-      currentSelectState
-    );
-    showSuccessMessage(e);
-    clearInputs();
   } else {
-    showFormAlert();
+    showFormAlert("Будь ласка, заповніть всі поля.");
   }
 });

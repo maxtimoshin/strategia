@@ -957,6 +957,7 @@
     -o-transition: all 0.3s;
     transition: all 0.3s;
     border-radius: 10px;
+    font-family: "TT Firs Neue";
 }
 
 .form-submit-button:hover {
@@ -1103,5 +1104,9 @@
 
 .course-block a button:hover {
     background: #eeebdd;
+    color: #810000;
+}
+
+.work-type-item span {
     color: #810000;
 }

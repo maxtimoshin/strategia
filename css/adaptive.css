@@ -12,6 +12,13 @@
 }
 
 @media (max-width: 900px) {
+    .top-header-heading,
+    .large-bottom-heading {
+        font-size: 140px;
+    }
+    .split-title {
+        display: inline;
+    }
     .nav-list,
     .consult-button {
         display: none;
@@ -53,7 +60,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 840px) {
     .header-content {
         margin: 34px 0 40px 0;
         -webkit-box-pack: start;
@@ -80,6 +87,8 @@
         font-weight: 400;
         color: #1b1717;
         text-align: center;
+        align-self: center;
+        margin: 40px 0;
     }
     .mobile-header-image span {
         font-size: 20px;
@@ -101,10 +110,10 @@
         line-height: 80%;
     }
     .top-header-heading {
-        margin: 25px 0 0 0;
+        /* margin: 25px 0 0 0; */
     }
     .header-content-label {
-        padding: 8px 5px;
+        padding: 10px 6px;
         /* max-width: 214px; */
     }
     .small-bottom-heading {
@@ -127,7 +136,7 @@
     }
     .upper-block-title-text,
     .lower-block-title-text {
-        font-size: 44px;
+        font-size: 38px;
     }
     .working-for-block {
         -webkit-box-orient: vertical;
@@ -198,7 +207,7 @@
     }
     .how-we-work-title,
     .how-we-work-subtitle {
-        font-size: 45px;
+        font-size: 38px;
     }
     .how-we-work-types {
         -webkit-box-orient: vertical;
@@ -214,9 +223,7 @@
         font-size: 18px;
         font-weight: 400;
     }
-    .work-type-item span {
-        color: #810000;
-    }
+
     .hidden-text {
         display: none;
     }
@@ -498,6 +505,23 @@
         background: #eeebdd;
         color: #810000;
     }
+    .top-header-heading,
+    .large-bottom-heading {
+        font-size: 120px;
+    }
+    .header-action-block {
+        margin: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-header-heading,
+    .large-bottom-heading {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 470px) {
 }
 
 @media (min-width: 360px) and (max-width: 600px) {

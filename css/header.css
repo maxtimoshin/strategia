@@ -142,6 +142,10 @@
     display: none;
 }
 
+.split-title {
+    display: none;
+}
+
 .right-header-content {
     width: 40%;
     display: -webkit-box;
